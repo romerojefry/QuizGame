@@ -1,8 +1,10 @@
-var secondsLeft = 0
+var secondsLeft = 0;
 var timer;
+var score = 0;
+var questions = -1;
 
 
-
+//to start a timer
 function start() {
     secondLeft = 35
     document.getElementById("secondsLeft").innerHTML = secondsLeft;
@@ -16,6 +18,18 @@ function start() {
         }
     }, 1000);
     next()
+}
+
+//setting store to keep track of score
+function placeScore() {
+    localStorage.setItem("you're score", score) 
+    grabScore();
+}
+
+function grabScore(){
+    var quizContent = `<h1>` + localStorage.getItem("highscore") + `<h1>`;
+
+    document.getElementById("bodyQuiz").innerHTML = quizRender
 }
 // my questions
 var myQuestions = [
@@ -65,4 +79,3 @@ var myQuestions = [
     }
 ];
 
-//writing out my variable
