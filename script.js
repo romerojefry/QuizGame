@@ -101,5 +101,16 @@ function game() {
 
     var quizRender = "<h2>" + myQuestions[questions].title+ "<h2>"
 
+    for(var buttonLoop = 0; buttonLoop < myQuestions[questions].choices.length; buttonLoop++){
+        var buttonCode = "<button onclick=\"[ANS]\">[CHOICE]</button>";
+        buttonCode = buttonCode.replace("[CHOICE]", myQuestions[questions].choices[buttonLoop]);
+        if (myQuestions[questions].choices[buttonLoop] == myQuestions[questions].answers) {
+            buttonCode = buttonCode.replace("[ANS]", "correct()");
+        } else {
+            buttonCode = buttonCode.replace("[ANS]", "incorrect()");
+        }
+        quizRender += buttonCode
+    }
+
     document.getElementById("quizBody").innerHTML = quizRender;
 }
