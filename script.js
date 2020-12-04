@@ -31,6 +31,18 @@ function grabScore(){
 
     document.getElementById("bodyQuiz").innerHTML = quizRender
 }
+
+//resetting the quiz
+
+function resetQuiz() {
+    clearInterval(timer);
+    score = 0;
+    questions = -1;
+    secondsLeft = 0
+    timer = null;
+
+    document.getElementById("secs left").innerHTML = secondsLeft;
+}
 // my questions
 var myQuestions = [
     {
