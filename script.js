@@ -17,7 +17,7 @@ function start() {
     }, 1000);
     next()
 }
-
+// my questions
 var myQuestions = [
     {
         question: "What color is blueberry jam?",
@@ -28,5 +28,41 @@ var myQuestions = [
         },
         correctAnswer: 'a'
     },
+    {
+        question: "Is tomato a fruit?",
+        anwsers: {
+            a: 'true',
+            b: 'false',
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "What is the captial of Thailand",
+        anwsers: {
+            a: 'Manila',
+            b: 'Bangkok!',
+            c: 'Jakarta',
+        },
+        correctAnwser: 'b'
+    },
+    {
+        question: "Which country was first to the reach space?",
+        anwsers: {
+            a: 'USA',
+            b: 'China',
+            c: 'Russia',
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "Is Australia a country or contient?",
+        anwsers: {
+            a: 'contient',
+            b: 'country',
+            c: 'both',
+        },
+        correctAnswer: 'c'
+    }
 ];
+
 //writing out my variable
