@@ -27,7 +27,7 @@ function placeScore() {
 }
 
 function grabScore(){
-    var quizContent = `<h1>` + localStorage.getItem("highscore") + `<h1>`;
+    var quizContent = "<h1>" + localStorage.getItem("highscore") + "<h1>";
 
     document.getElementById("bodyQuiz").innerHTML = quizRender
 }
@@ -91,3 +91,15 @@ var myQuestions = [
     }
 ];
 
+function game() {
+    questions++;
+
+    if(questions > myQuestions.length - 1){
+        endGame();
+        return;
+    }
+
+    var quizRender = "<h2>" + myQuestions[questions].title+ "<h2>"
+
+    document.getElementById("quizBody").innerHTML = quizRender;
+}
