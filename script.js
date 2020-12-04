@@ -6,18 +6,18 @@ var questions = -1;
 
 //to start a timer
 function start() {
-    secondLeft = 35
+    secondsLeft = 35
     document.getElementById("secondsLeft").innerHTML = secondsLeft;
 
     timer = setInterval(function(){
         secondsLeft--;
-        document.getElementById("secondLeft").innerHTML = secondsLeft;
+        document.getElementById("secondsLeft").innerHTML = secondsLeft;
         if (secondsLeft <= 0) {
             clearInterval(timer);
             endGame();
         }
     }, 1000);
-    next()
+    game()
 }
 
 //setting store to keep track of score
